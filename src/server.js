@@ -35,12 +35,12 @@ app.use((error, req, res, next) => {
       hour12: true,
   });
 
-  fs.appendFileSync(
-    path.join(process.cwd(), "src", "log.txt"),
-    `${req.url}___${error.name}___${error.message}___${
-      error.status
-    }___${date}\n`
-  );
+  // fs.appendFileSync(
+    // path.join(process.cwd(), "src", "log.txt"),
+    // `${req.url}___${error.name}___${error.message}___${
+      // error.status
+    // }___${date}\n`
+  // );
 
   res.status(error.status).json({
     status: error.status,
