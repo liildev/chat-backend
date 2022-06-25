@@ -1,23 +1,8 @@
 [
     {
-        "username": "nozim",
-        "email": "nozim@gmail.com",
-        "password": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
-        "userId": 1,
-        "avatar": "1655310045885-15183704B7B9B982-60A3-44DB-ABDB-9BBA6EBD6628.jpeg"
-    },
-    {
-        "username": "Mansourov",
-        "password": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
-        "email": "mansurov.jr@mail.ru",
-        "userId": 2,
-        "avatar": "1655313968899-341903005F8A1BF3A-6E9B-4F7F-AFE0-4AB8019DD988.jpeg"
-    },
-    {
         "username": "Nozim",
-        "password": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
         "email": "mansurov.jr@mail.ru",
-        "userId": 3,
-        "avatar": "1655314083172-656892055FA02DBF7-6466-4279-867E-1FBFC508CCE6.jpeg"
+        "password": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
+        "user_id": 1
     }
 ]

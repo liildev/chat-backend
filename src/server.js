@@ -1,19 +1,23 @@
 import express from "express";
 import usersRouter from "./router/users.js";
-import messageRouter from "./router/messages.js";
-import cors from 'cors'
+import productsRouter from "./router/products.js";
+import categoriesRouter from "./router/categories.js";
+import subCategoriesRouter from "./router/subCategories.js";
+
 import fs from 'fs'
 import path from "path";
 
-const PORT = process.env.PORT || 5005;
+const PORT = process.env.PORT || 6006;
 
 const app = express();
 
 app.use(express.json());
-app.use(express.static(path.join(process.cwd(), 'uploads')))
-app.use(cors())
+
 app.use(usersRouter);
-app.use(messageRouter);
+app.use(categoriesRouter);
+app.use(subCategoriesRouter);
+app.use(productsRouter);
+
 
 
 app.use((error, req, res, next) => {
@@ -43,22 +47,9 @@ app.use((error, req, res, next) => {
     message: "InternalServerError",
   });
 
-  // process.exit();
+  process.exit();
 });
 
 
 
 app.listen(PORT, () => console.log(`*${PORT}`));
-
-// let numbers = [
-//   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-// ];
-
-// function paginate(data, page, limit) {
-//   return {
-//       results : data.slice((page-1) * limit, limit*page),
-//       pages: Math.ceil(data.length / limit)
-//   }
-// }
-
-// console.log(paginate(numbers, 1, 5));

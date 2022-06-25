@@ -13,8 +13,8 @@ export default function checkToken (req, res, next) {
             return next( new ForbiddenError(403, 'token required'))
         }
 
-        let {userId} = jwt.verify(token)
-        req.userId = userId
+        let {user_id} = jwt.verify(token)
+        req.user_id = user_id
 
         return next()
     } catch (error) {
